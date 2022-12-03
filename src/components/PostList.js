@@ -14,6 +14,7 @@ const PostList = () => {
               <AuthorPost authorId={post.authorId} />
             </span>
             <p>{post.content.substring(0, 100)}</p>
+            <p>{post.date}</p>
           </div>
         ))}
       </>
