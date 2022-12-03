@@ -30,6 +30,7 @@ const postSlice = createSlice({
             id: nanoid(),
             title,
             content,
+            date: new Date().toISOString(),
             authorId,
           },
         };
