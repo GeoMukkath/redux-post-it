@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import AuthorPost from "./AuthorPost";
 
 const PostList = () => {
   const posts = useSelector((store) => store.posts);
@@ -9,6 +10,9 @@ const PostList = () => {
         {posts.map((post) => (
           <div key={post.id}>
             <h3>{post.title}</h3>
+            <span>
+              <AuthorPost authorId={post.authorId} />
+            </span>
             <p>{post.content.substring(0, 100)}</p>
           </div>
         ))}
